@@ -1,7 +1,7 @@
 import axios from "axios"
 import { API_SERVER_HOST } from "./todoApi"
 
-const rest_api_key = '6f81ea69c8aa89fa41c182eef70b7a3e'
+const rest_api_key = '4b55ea9673c82ebb430806671807ff9f'
 const redirect_uri = 'http://localhost:3000/member/kakao'
 const auth_code_path = 'https://kauth.kakao.com/oauth/authorize'
 const access_token_url = 'https://kauth.kakao.com/oauth/token'
