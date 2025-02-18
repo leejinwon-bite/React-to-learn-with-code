@@ -54,12 +54,14 @@ public class ProductServiceImpl implements ProductService {
       .pageRequestDTO(pageRequestDTO)
       .build();
   }
+
   @Override
   public Long register(ProductDTO productDTO) {
     Product product = dtoToEntity(productDTO);
     Product result = productRepository.save(product);
     return result.getPno();
   }
+
   private Product dtoToEntity(ProductDTO productDTO) {
     Product product = Product.builder()
     .pno(productDTO.getPno())
@@ -77,6 +79,7 @@ public class ProductServiceImpl implements ProductService {
     });
     return product;
   }
+  
   @Override
   public ProductDTO get(Long pno) {
     Optional<Product> result = productRepository.selectOne(pno);
